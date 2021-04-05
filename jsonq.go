@@ -96,6 +96,10 @@ func (j *JSONQ) FromString(str string) *JSONQ {
 	j.raw = []byte(str)
 	return j.decode() // handle error
 }
+func (j *JSONQ) FromBytes(bs []byte) *JSONQ {
+	j.raw = bs
+	return j.decode() // handle error
+}
 
 // Reader reads the json content from io reader
 func (j *JSONQ) Reader(r io.Reader) *JSONQ {
