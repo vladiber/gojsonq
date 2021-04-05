@@ -809,6 +809,10 @@ func (j *JSONQ) getAggregationValues(property ...string) []float64 {
 	return ff
 }
 
+func (j *JSONQ) GetRoot() interface{} {
+	return j.rootJSONContent
+}
+
 // Sum returns sum of values from array or from map using property
 func (j *JSONQ) Sum(property ...string) float64 {
 	var sum float64
